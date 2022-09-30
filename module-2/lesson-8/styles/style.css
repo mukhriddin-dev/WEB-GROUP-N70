@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container{
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+body{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+}
+
+img{
+
+   color:green;
+   
+}
+
+.fb:hover{
+   fill:yellow;
+}
+
+.num:hover{
+   fill:aquamarine;
+}
+

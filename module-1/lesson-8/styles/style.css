@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body{
+  background-image:url("https://picsum.photos/id/112/900/800");
+  width:100vw;
+  height: 100vh;
+  background-color: lime;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+header{
+  width: 100%;
+
+}
+
+.container{
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(215, 183, 5);
+  height: 60px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.nav__ul{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+
+.nav__ul--list::after{
+  content: "";
+  width: 0.1%;
+  height: 2px;
+  background-color: #111;
+  display:inline-block;
+  margin-bottom: 16px;
+  opacity: 1;
+  transition: all 0.4s ease-out;
+}
+
+
+.nav__ul--list:hover::after{
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #111;
+  display:inline-block;
+  margin-bottom: 16px;
+  opacity: 1;
+}
+
+.nav__ul--list-link{
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#000;
+}
+
+.nav__ul--list-link:hover{
+  color:#333;
+}
+
+.intro{
+  height: 90vh;
+}
+
+.wrapper{
+  background-color: rgba(0, 0, 0, 0.304);
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  padding: 50px;
+}
+
+h2{
+  text-align: center;
+  color:#fff;
+  margin: 30px;
+}
+
+.form{
+  width: 80%;
+  height: 600px;
+  margin: auto;
+  color:white;
+
+}
+
+label{
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  margin: 12px;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  color:rgb(0, 0, 0);
+}
+
+input[type="radio"]{
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+}

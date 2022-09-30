@@ -1,0 +1,13 @@
+%layout-card {
+   background-color: silver;
+   margin: 5px;
+   width: 300px;
+   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+%navbar{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+

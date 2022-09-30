@@ -1,0 +1,58 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.table {
+  margin: 40px auto;
+  width: 800px;
+  border-collapse: collapse;
+  text-align: center;
+  border:none;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: rgba(12, 198, 49, 0.407);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(12, 198, 49, 0.407);
+  color: red;
+}
+
+.tablehead {
+  background-color: red;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin: 50px auto;
+  transition: all 0.5s ease;
+  box-shadow: 1px 1px 10px lime;
+  transform: translate(200px, 100px) rotate(35deg) skew(30deg) scale(2);
+  transform-origin: top;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(13, 255, 0);
+  display: none;
+}

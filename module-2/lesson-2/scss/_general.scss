@@ -1,0 +1,19 @@
+*::after,
+*::before,
+* {
+   box-sizing: border-box;
+}
+
+html {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   all: inherit;
+   font-family: 'Poppins', sans-serif;
+}
+
+img{
+   max-width: 100%;
+}

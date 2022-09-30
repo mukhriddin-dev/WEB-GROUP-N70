@@ -1,0 +1,152 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container{
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header{
+  width: 100%;
+}
+
+/* =================== navbar start =================== */
+
+.nav{
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: aqua;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+}
+
+.nav .nav__ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  list-style-type: none;
+}
+
+.nav .nav__ul .nav__ul__list a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#000;
+}
+
+
+.nav .nav__logo{
+  margin-left: 12px;
+}
+
+/* =================== navbar end =================== */
+
+.hero{
+  width: 100%;
+  height: 600px;
+  
+  background-image: url("https://picsum.photos/id/925/700/430");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: bottom ;
+
+ 
+}
+
+.wrapper{
+  height: 598px;
+  width: 100%;
+  background-image: url("https://picsum.photos/id/165/700/430");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center; 
+
+  display: -webkit-box; 
+
+  display: -ms-flexbox; 
+
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+}
+
+
+.wrapper h3{
+  font-size: 90px;
+  text-transform: uppercase;
+}
+
+
+
+/* wrapper card */
+
+.centeral{
+  width: 100%;
+  height: 600px;
+  background: rgb(2,0,36);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2,0,36,1)), color-stop(39%, rgba(121,9,77,1)), color-stop(55%, rgba(62,123,118,1)), color-stop(69%, rgba(62,108,164,1)), color-stop(74%, rgba(52,125,179,1)), to(rgba(0,212,255,1)));
+  background: -o-linear-gradient(left, rgba(2,0,36,1) 0%, rgba(121,9,77,1) 39%, rgba(62,123,118,1) 55%, rgba(62,108,164,1) 69%, rgba(52,125,179,1) 74%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,77,1) 39%, rgba(62,123,118,1) 55%, rgba(62,108,164,1) 69%, rgba(52,125,179,1) 74%, rgba(0,212,255,1) 100%);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: bottom ;
+  background-attachment: fixed; 
+ 
+}
+
+
+.wrapper__card{
+  height: 598px;
+  width: 100%;
+  /* background-image: url("https://picsum.photos/id/95/700/430"); */
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center; 
+
+  display: -webkit-box; 
+
+  display: -ms-flexbox; 
+
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+
+}
+
+
+.wrapper__card h3{
+  font-size: 90px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: yellow;
+  -webkit-text-stroke-width: 4px;
+}

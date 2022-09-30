@@ -1,0 +1,15 @@
+
+@mixin custom-card($bg,$m,$w,$h,$bs) {
+   background-color: $bg;
+   margin: $m;
+   width: $w;
+   box-shadow:$bs;
+   height: $h;
+}
+
+@mixin  navbar($d,$js,$ai,$h) {
+   display: $d;
+   justify-content: $js;
+   align-items:$ai;
+   height: $h;
+}

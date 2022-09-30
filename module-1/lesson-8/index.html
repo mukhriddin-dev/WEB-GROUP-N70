@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- normalize css -->
+   <link rel="stylesheet" href="./styles/normalize.css">
+   <!-- main css -->
+   <link rel="stylesheet" href="./styles/style.css">
+   <title>lesson-8</title>
+</head>
+
+<body>
+
+   <header>
+      <div class="container">
+         <nav class="nav">
+            <h2 class="nav__logo">
+               LOGO
+            </h2>
+
+            <ul class="nav__ul">
+               <li class="nav__ul--list"><a href="#" class="nav__ul--list-link">Home</a></li>
+               <li class="nav__ul--list"><a href="#" class="nav__ul--list-link">About</a></li>
+               <li class="nav__ul--list"><a href="#" class="nav__ul--list-link">Service</a></li>
+               <li class="nav__ul--list"><a href="#" class="nav__ul--list-link">Contact</a></li>
+               <li class="nav__ul--list"><a href="#" class="nav__ul--list-link">Team</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <!-- =========== HEADER END ================ -->
+
+
+   <main>
+      <section class="intro">
+         <div class="container">
+
+            <div class="wrapper">
+
+               <h2>Registration form</h2>
+
+               <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+
+                  <label for="user">
+                     First name : <input type="text" id="user" placeholder="Enter your Name" maxlength="20" minlength="4" name="first_name" aria-label="Enter your Name" required>
+                  </label>
+
+                  <label for="lastname">
+                     Last name :  <input type="text" name="last_name" id="lastname" required>
+                  </label>
+
+                  <label for="lastname">
+                     Age :  <input type="number" name="age" id="lastname" min="12" max="90" required>
+                   </label>
+
+
+                   <label for="email">
+                     Email:  <input type="email" id="email" name="email" required>
+                   </label>
+
+
+                   <label for="Password">
+                     Password : <input type="password" name="password" id="Password" maxlength="20" minlength="8" required >
+                   </label>
+
+                   <!-- pattern="/^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/." -->
+
+                   <label for="birthday">
+                     Date of birth:  <input type="date"  name="date" id="birthday" required>
+                   </label>
+
+                   <label for="male">
+                      Male <input type="radio" id="male" name="gender">
+                   </label>
+
+                   <label for="female">
+                     Female <input type="radio" id="female" name="gender">
+                  </label>
+
+
+                  <label for="subscribe">
+                     subscribe <input type="checkbox" name="check">
+                  </label>
+
+
+
+                      <input type="submit" value="registration">
+                  
+                  
+               </form>
+
+            </div>
+
+         </div>
+      </section>
+   </main>
+
+
+
+</body>
+
+</html>
