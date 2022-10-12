@@ -25,6 +25,10 @@
 // NUMBER => 12 , 7 , 21, 0.0000003 , -122, , 1234.12432 , 0
 // STRING => "12" , "javaScript" , 'personal hom page' , `lesson`;
 // Boolean => true => 1 . false => 0
+// Undefined
+// null
+
+
 
 
 // var fruit = 'apple';
@@ -67,7 +71,7 @@
 //  a=a%b;
 //  a=a**b;
 
-// a+=b;
+// a+=b; a=a+b => a+=b
 // a-=b;
 // a/=b;
 // a%=b; 
