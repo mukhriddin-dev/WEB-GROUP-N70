@@ -1,0 +1,33 @@
+Day 5
+Array
+
+.push(4);
+.pop();
+.shift();
+.unshift(0);
+.concat('c');
+.join('-');
+.slice(index1,index2);
+.splice(index1, n)
+.indexOf('b');
+.includes('c');
+
+
+String methods:
+
+String.length
+String.trim()
+String.toUpperCase();
+String.toLowerCase();
+String.split();
+
+String.substring(x,y);
+String.search();
+charAt(n)
+String.match();
+
+
+
+Object 
+
+
