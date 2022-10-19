@@ -11,6 +11,7 @@ Array
 .splice(index1, n)
 .indexOf('b');
 .includes('c');
+.flat()
 
 
 String methods:
