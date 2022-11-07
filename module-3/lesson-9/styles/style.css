@@ -1,0 +1,27 @@
+body{
+   background-color: rgb(53, 53, 53);
+   overflow-x: hidden;
+}
+label{
+   position: relative;
+}
+.show{
+   position: absolute;
+   top:12px;
+   right: 8px;
+   font-size: 23px;
+}
+
+::placeholder{
+   color:red;
+}
+
+.card{
+   transition: all 0.4s ease;
+}
+
+
+#swipe{
+transform: translateX(200%);
+}
+

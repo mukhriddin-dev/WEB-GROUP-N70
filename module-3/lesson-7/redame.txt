@@ -1,37 +1,14 @@
-Day 6
+Day 7
 
-Object
-
-to bulild methods
-
-Object methods
-
-Object.keys(testScore); // gives all keys
-Object.values(testScore); // gives all values
-Object.entries(testScore)
+Styling elements
 
 
-Locating DOM elements using selectors
-
-getElementsByTagName()
-
-getElementsByClassName()
-
-getElementById()
-
-querySelector()
-
-querySelectorAll()
-
-HTML DOM Element style Property
-
-Day 6
 Events
 addEvenetListener / on (difference)
 JavaScript DOM events
 Mouse events:
 
-click
+click => bir marta bosganda 
 
 dblclick
 
@@ -48,32 +25,17 @@ Keyboard events:
 Keydown
 Keyup
 Kuypress
+
 Form events:
 
 focus
-submit
+
 blur
 change
 input
 Scroll & window Event
 
+submit
 scroll
 DOMContentLoaded
 load
-
-
-push 
-Pop
-unshift
-shift
-slice
-splice
-length
-concat
-includes
-
-
-
-
-
-

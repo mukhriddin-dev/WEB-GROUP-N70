@@ -1,126 +1,83 @@
-"use strict"
+"use strict";
 
-// let array=[1,2,3,4];
+const btn = document.querySelector(".btn-danger"),
+  card = document.querySelector(".card"),
+  btnYellow = document.querySelector(".btn-warning"),
+  inputForm = document.querySelector(".form-control"),
+  text = document.querySelector(".text"),
+  select = document.querySelector("#select");
 
-// console.log(array.length);
-
-// let str='javascript';
-
-// console.log(str.split(' '));
-
-// const user={
-//    isname: "Ismoil",
-//    age:23,
-//    allInfo: function(str){
-//       console.log(str);
-//     },
-
+// let obj={
+// color:""
 // }
 
-// user.allInfo('JAVASCRIPT')
+// obj.color="red";
 
-// let n1=+prompt('n1=');
-// let n2=+prompt('n2=');
+// obj.color="green";
 
-// let calc = {
-//    plus: function (a, b) {
-//       console.log(a + b);
-//    },
-//    minus: function (a, b) {
-//       console.log(a - b);
-//    },
-//    multiple: function (a, b) {
-//       console.log(a * b);
-//    },
-//    devide: function (a, b) {
-//       console.log(a / b);
-//    },
+// console.log(obj);
 
-//    isname:"Ismoil"
+// console.log(card.style.color="red");
+// console.log(card.style);
+// card.style.borderRadius="10px"
+// card.style.border="4px solid green";
 
-// }
+// card.style.cssText="border-radius:10px ; border: 4px solid green";
 
-// console.log(calc.isname);
+// console.log(card.id);
+// console.log(card.title="lesson1");
 
-// console.log(calc);
-
-// calc.plus(n1,n2);
-// calc.minus(n1,n2);
-// calc.multiple(n1,n2);
-// calc.devide(n1,n2);
-
-// CONTEXT THIS
-
-
-const room={
-   isname:'Tesla',
-   color:"black & yellow",
-   size:24,
-   type:'medium',
-   loaction:"NT Xadra branch",
-   peoples:{
-     name:"ok",
-     age:12,
-     color:"red"
-   },
-   data:['1']
+function nightMode() {
+  card.style.cssText = "background-color:yellow";
+  document.body.style.backgroundColor = "#000";
+  document.body.style.color = "#fff";
 }
 
-console.log(room['isname']);
+function lightMode() {
+  card.style.cssText = "background-color:coral;";
+  document.body.style.backgroundColor = "#fff";
+}
 
-// let array=[1,2,3,4,5];
+// btn.onmousedown=nightMode
+// btn.onmouseup=lightMode
 
+btn.addEventListener("mousedown", () => {
+  nightMode();
+});
 
-// for(let i=0; i<array.length; i++){
-//    console.log(array[i])
-// }
+btn.addEventListener("mouseup", () => {
+  lightMode();
+});
 
-// console.log(room)
+inputForm.addEventListener("focus", () => {
+  console.log(inputForm.value);
+  text.textContent = inputForm.value;
+  console.log("input focused");
+});
 
-// // console.log(Object.keys())
+inputForm.addEventListener("change", () => {
+  console.log(inputForm.value);
+  text.textContent = inputForm.value;
+  console.log("input blured");
+});
 
-// console.log(Object.keys(room));
-// console.log(Object.values(room))
-// let keyVal=Object.entries(room);
-// console.log(keyVal)
-// console.log(Object.fromEntries(keyVal))
+select.addEventListener("change", () => {
+  if (select.value == 1) {
+    nightMode();
+  }
+  if (select.value == 2) {
+    lightMode();
+  }
+});
 
-// for(let key in room){
-//    console.log(typeof(room[key]));
-//    if(typeof(room[key])=="object"){
-//       for(let i in room[key]){
-//          console.log(i)
-//       }
-//    }
+window.addEventListener("scroll", () => {
+  let scrolltop = window.scrollY;
 
-// }
+  console.log(scrolltop);
 
-
-
-
-let btn=document.getElementById('btn');
-let h1=document.getElementsByTagName('h1');
-let classes=document.getElementsByClassName('text');
-const btns=document.querySelectorAll('.btn');
-const title=document.querySelector('.card .box .app .title');
-
-console.log(title);
-
-const text1=document.querySelector('.card1- .title');
-
-console.log(text1);
-
-
-
-
-// btns.forEach((e,i,a)=>{
-//  if(i%2==0){
-//     e.style.display="none  "
-//  }
-// })
-
-console.log(btns);
-console.log(classes)
-console.log(h1);
-console.log(btn);
-
+  if (Math.round(window.scrollY) > 300) {
+    nightMode();
+  } else {
+    lightMode();
+  }
+});

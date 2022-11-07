@@ -1,0 +1,144 @@
+body{
+   background-color: rgb(255, 255, 255);
+   overflow-x: hidden;
+}
+label{
+   position: relative;
+}
+.show{
+   position: absolute;
+   top:12px;
+   right: 8px;
+   font-size: 23px;
+}
+
+::placeholder{
+   color:red;
+}
+
+.card{
+   transition: all 0.4s ease;
+}
+
+
+.swipe{
+transform: translateY(-200%);
+}
+
+.menu{
+   width: 50%;
+   position: relative;
+   transition: all 0.3s linear;
+}
+
+.wrapper{
+   display: grid;
+   grid-template-columns: repeat(2, minmax(120px, 1fr));
+   gap: 10px;
+}
+@media only screen and (min-width:320px){
+
+   .menu{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top:90px;
+      background-color: rgba(0, 0, 0, 0.756);
+      min-width: 100%;
+      left:0px;
+      height: 90vh;
+      z-index: 22222;
+      backdrop-filter: blur(10px);
+
+   
+   }
+
+   .menu > li{
+      margin: 10px;
+      text-align: center;
+      font-size: 18px;
+      background-color: rgba(255, 255, 255, 0.208);
+   }
+
+   .menu > li:hover{
+      background-color: rgba(255, 255, 255, 0.625);
+   }
+   .menu > li:active{
+      background-color: rgba(255, 255, 255, 0.625);
+   }
+   
+}
+
+
+
+@media only screen and (min-width:375px){
+
+   .menu{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top:90px;
+      background-color: rgba(0, 0, 0, 0.756);
+      min-width: 100%;
+      left:0px;
+      height: 90vh;
+      z-index: 22222;
+      backdrop-filter: blur(10px);
+
+   
+   }
+
+   .menu > li{
+      margin: 10px;
+      text-align: center;
+      font-size: 18px;
+      background-color: rgba(255, 255, 255, 0.208);
+   }
+
+   .menu > li:hover{
+      background-color: rgba(255, 255, 255, 0.625);
+   }
+   .menu > li:active{
+      background-color: rgba(255, 255, 255, 0.625);
+   }
+   
+}
+
+
+@media only screen and (min-width:576px){
+
+   .menu{
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      top:0px;
+      background-color: transparent;
+      min-width: 60%;
+      width: 50%;
+      left:0px;
+      height:20px;
+      z-index: 22222;
+      backdrop-filter: blur(0px);
+      
+
+   
+   }
+
+   .menu > li{
+      margin: 0px;
+      text-align: center;
+      font-size: 16px;
+      background-color:transparent;
+   }
+
+   .menu > li:hover{
+      background-color: none;
+   }
+   .menu > li:active{
+      background-color: rgba(255, 255, 255, 0.625);
+   }
+   
+}

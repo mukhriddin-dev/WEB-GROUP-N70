@@ -1,0 +1,23 @@
+DAY 10 
+
+classList
+
+add()
+remove()
+toggle()
+contains()
+PRACTICE SLIDER 🔥🔥
+
+Create Dynamic Element In Javascript
+
+Day 9
+Create Dynamic Element In Javascript
+
+Higher order functions
+
+Array Method .reduce()
+Array Method .forEach()
+Array Method .filter()
+Array Method .map()
+Extra methods .
+

@@ -1,0 +1,27 @@
+.btn-danger{
+   padding: 10px;
+   background-color: crimson;
+   color:#fff;
+   border: none;
+}
+
+.btn-warning{
+   padding: 10px;
+   background-color: rgb(255, 238, 0);
+   color:rgb(0, 0, 0);
+   border: none;
+}
+
+.card{
+   width: 400px;
+   margin: 40px auto;
+   background-color: coral;
+   padding: 10px;
+   
+}
+
+.form-control{
+   width: 400px;
+   height: 70px;
+   font-size: 22px;
+}
