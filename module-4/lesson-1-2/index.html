@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- BOOTSTRAP MIN CSS -->
+   <link rel="stylesheet" href="./styles/bootsatrap.min.css" />
+   <!-- MAIN CSS -->
+   <link rel="stylesheet" href="./styles/style.css" />
+
+   <title>Lesson - 1</title>
+</head>
+
+<body>
+   <header class="bg-success">
+      <div class="container">
+         <nav class="nav p-3 bg-success">
+            <h3 class="nav__logo text-white">All Movies APP</h3>
+         </nav>
+      </div>
+   </header>
+
+   <main>
+      <section>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 p-3 bg-light">
+                  <form action="#" id="submitForm">
+                     <label for="filmName" class="w-75 my-2 fs-5">
+                        Enter film name
+                        <input type="text" class="form-control p-3" placeholder="Enter film name" id="filmName">
+                     </label>
+                     <label for="filmRating" class="w-75 my-2 fs-5">
+                        Enter film rating
+                        <input type="number" min="1" max="10" class="form-control p-3" placeholder="Enter film rating"
+                        id="filmRating">
+                     </label>
+
+                     <select id="category" class="form-select my-3 w-75 p-3">
+                        <option value="all" selected disabled>Select film category</option>
+                     </select>
+
+                     <button type="submit" class="btn btn-success w-75 p-3">
+                        SEARCH
+                     </button>
+
+                  </form>
+
+                  <div class="card d-none card-res w-75 my-3 p-3 shadow bg-light">
+                     <h4 class="text-success" id="res"> </h4>
+                  </div>
+               </div>
+
+               <div class="col-md-7 p-3 bg-light m-2 ">
+
+                  <div class="wrapper">
+             
+                  </div>
+
+               </div>
+               <div class="col p-3 bg-light m-2">
+
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- main script  -->
+   <script src="./db.js"></script>
+   <script src="./scripts/utils.js"></script>
+   <script src="./script.js"></script>
+</body>
+
+</html>

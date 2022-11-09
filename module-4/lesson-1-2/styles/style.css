@@ -1,0 +1,50 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+.container {
+   max-width: 1640px !important;
+}
+
+
+
+.wrapper{
+   display: grid;
+   grid-template-columns: repeat(Auto-fill, minmax(320px, 1fr));
+   gap: 10px;
+
+}
+
+
+/* loader css */
+
+.loader{
+   display: block;
+   position: relative;
+   height: 20px;
+   width: 140px;
+   background-image: 
+   linear-gradient(#FFF 20px, transparent 0), 
+   linear-gradient(#FFF 20px, transparent 0), 
+   linear-gradient(#FFF 20px, transparent 0), 
+   linear-gradient(#FFF 20px, transparent 0);
+   background-repeat: no-repeat;
+   background-size: 20px auto;
+   background-position: 0 0, 40px 0, 80px 0, 120px 0;
+   animation: pgfill 1s linear infinite;
+   left:350px;
+   top:130px;
+ }
+ 
+ @keyframes pgfill {
+   0% {   background-image: linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+   25% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+   50% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+   75% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+   100% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0); }
+ }
+ 
+ /* loader css end */
