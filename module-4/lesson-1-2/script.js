@@ -1,6 +1,6 @@
 "use strict";
 
-movies.splice(100);
+movies.splice(60);
 
 // ------ NORMALIZE ALL MOVIES--------//
 
@@ -47,9 +47,9 @@ function renderAllMovies() {
     </ul>
 
        <div class="social d-flex">
-          <button class="btn btn-danger m-2">
-             Trailers
-          </button>
+       <a href="${el.link}" target="_blank" class="btn btn-danger m-2">
+       Trailers
+    </a>
           <button class="btn btn-primary m-2">
              Read more . . .
           </button>
@@ -70,15 +70,56 @@ renderAllMovies()
 
 
 
+// ---- DYNAMIC CATEGORIES --------------------------------
+
+const dynamicCategory = () => {
+
+   let category = [];
+
+   AllMovies.forEach((e) => {
+      e.category.forEach((el) => {
+
+         if (!category.includes(el)) {
+
+            category.push(el)
+
+         }
+      })
+   })
+
+   category.sort()
+   category.unshift('All')
+   category.forEach((el) => {
+      const option = createElement('option', 'item-option', el);
+      $('#category').appendChild(option)
+   })
+
+}
+
+dynamicCategory()
+
+
+
+
+
+
+
 // ------------ FIND FILMS FUNCTIONS ------------
 
 
 
-const findFilm = (regexp, rating) => {
+const findFilm = (regexp, rating = 0, category) => {
 
-   console.log(regexp);
+
+   if (category === 'All') {
+      return AllMovies.filter((film) => {
+         return film.title.match(regexp) && film.rating >= rating
+      })
+
+   }
+
    return AllMovies.filter((film) => {
-      return film.title.match(regexp) && film.rating >=rating;
+      return film.title.match(regexp) && film.rating >= rating && film.category.includes(category)
    })
 
 }
@@ -90,32 +131,27 @@ $('#submitForm').addEventListener('submit', () => {
    $('.wrapper').innerHTML = `<span class="loader"></span>`;
 
    const searchValue = $('#filmName').value;
-   const filmRating =$('#filmRating').value;
+   const filmRating = $('#filmRating').value;
+   const filmCategory = $('#category').value;
 
    const regexp = new RegExp(searchValue, "gi");
 
-   const searchResult = findFilm(regexp, filmRating);
+   const searchResult = findFilm(regexp, filmRating, filmCategory);
 
-
+   console.log(searchResult);
 
    setTimeout(() => {
       if (searchResult.length > 0) {
          searchResultsRender(searchResult);
          $('.card-res').classList.remove('d-none');
-
+         console.log(searchResult.length);
          $('#res').innerHTML = `<strong >${searchResult.length}</strong> ta ma'lumot topildi`;
-
-         if (searchValue.length === 0) {
-            $('.card-res').classList.add('d-none');
-         }
 
       } else {
          $('.card-res').classList.add('d-none');
          $('.wrapper').innerHTML = `<h1 class="text-center text-danger">MA'LUMOT TOPILMADI</h1>`;
       }
    }, 2000)
-
-
 
 })
 
@@ -141,9 +177,9 @@ function searchResultsRender(data = []) {
           </ul>
    
           <div class="social d-flex">
-             <button class="btn btn-danger m-2">
+             <a href="${el.link}" target="_blank" class="btn btn-danger m-2">
                 Trailers
-             </button>
+             </a>
              <button class="btn btn-primary m-2">
                 Read more . . .
              </button>
