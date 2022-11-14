@@ -25,7 +25,7 @@ $('.wrapper').appendChild(box);
 
 
 
-console.log(window);
+
 
 
 // SET , GET , REMOVE , CLEAR 
@@ -58,4 +58,8 @@ $('.btn-secondary').addEventListener("click", () => {
 
 $('.btn-danger').addEventListener("click", () => {
    localStorage.clear()
+   $('.text-info').dataset.btn="ok"
 });
+
+
+

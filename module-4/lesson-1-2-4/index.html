@@ -23,6 +23,22 @@
    </header>
 
    <main>
+
+
+      <div class="modal-window modal-hide">
+
+         <div class="modal-container position-relative p-4 rounded-3">
+            <div class="btn btn btn-danger position-absolute end-0 me-4" id="close">X</div>
+            <div class="modal-content container">
+
+             
+
+
+            </div>
+         </div>
+      </div>
+
+
       <section>
          <div class="container">
             <div class="row">
@@ -35,7 +51,7 @@
                      <label for="filmRating" class="w-75 my-2 fs-5">
                         Enter film rating
                         <input type="number" min="1" max="10" class="form-control p-3" placeholder="Enter film rating"
-                        id="filmRating">
+                           id="filmRating">
                      </label>
 
                      <select id="category" class="form-select my-3 w-75 p-3">
@@ -56,7 +72,7 @@
                <div class="col-md-7 p-3 bg-light m-2 ">
 
                   <div class="wrapper">
-             
+                     <!-- all films render -->
                   </div>
 
                </div>

@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1640px !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(Auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+
+/* loader css */
+
+.loader {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 140px;
+  background-image: linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 0 0, 40px 0, 80px 0, 120px 0;
+  animation: pgfill 1s linear infinite;
+  left: 350px;
+  top: 130px;
+}
+
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0),
+      linear-gradient(#ff3d00 20px, transparent 0);
+  }
+}
+
+/* loader css end */
+
+/* modal window */
+
+.modal-window {
+  width: 100% !important;
+  min-height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.793);
+  backdrop-filter: blur(16px);
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.modal-window .modal-container {
+  width: 65%;
+  height: 70vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0px rgb(157, 157, 157);
+}
+
+.modal-hide {
+  transform: translateY(-200%);
+}
+
+#close {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2222222222;
+}
+
+.animate {
+  animation-name: animateModal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes animateModal {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+
+  25% {
+    transform: scale(0.95) translateX(-10px);
+  }
+
+  50% {
+    transform: scale(1) translateX(10px);
+  }
+
+  75% {
+    transform: scale(0.95) translateX(-10px);
+  }
+
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
