@@ -1,0 +1,11 @@
+1. destructuring 
+2. rest & spread operator
+3. shallow copy vs deep copy (clone)
+
+
+
+4. Understanding Javascript 'this' keyword (Context)
+
+
+
+
