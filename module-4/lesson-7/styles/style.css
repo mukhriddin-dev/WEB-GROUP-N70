@@ -1,0 +1,23 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+
+.wrapper {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(264px, 1fr));
+   gap: 75px;
+}
+
+.card{
+   max-height: 336px;
+}
+
+.card-top-img{
+   height: 160px;
+   min-width: 267px !important; 
+}
