@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>lesson-9</title>
+</head>
+
+<body>
+
+  <header class="bg-danger">
+    <div class="container">
+      <nav class="nav p-3 bg-danger d-flex justify-content-between w-100">
+
+        <h3 class="nav-logo text-white">TASK MANGER APP</h3>
+
+        <div class="user-info d-flex align-items-center gap-4">
+          <strong class="p-2 bg-warning rounded-pill" id="userLogin">User name</strong>
+          <button class="log_out p-2  btn btn-light" id="logout">
+            <i class="bi bi-box-arrow-in-right"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main  -->
+
+  <main>
+
+
+
+
+    <div class="toastify d-flex  justify-content-around align-items-center rounded-2 m-3 hide-toast">
+      <span id="notif-icon"><i class="bi bi-x-octagon text-white fs-3"></i></span>
+      <strong id="notif-message" class="text-white fs-5">Please fill form</strong>
+    </div>
+
+    <!-- modal content -->
+
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content w-100">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">EDIT DATA</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" id="edit">
+
+              <label for="taskTitle" class="w-100 my-3">
+                <input type="text" class="form-control p-3" placeholder="enter task title" id="editTitle" required>
+              </label>
+
+              <label for="taskdesc" class="w-100 my-3">
+                <input type="text" class="form-control p-3" placeholder="enter task description" id="editDesc" required>
+              </label>
+
+              <label for="taskDate" class="w-100 my-3">
+                <input type="date" class="form-control p-3" id="editDate" required>
+              </label>
+
+
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Save changes</button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- modal content end -->
+
+    <section id="main">
+      <div class="container">
+        <div class="row my-4">
+          <div class="col-md-4 p-3 shadow">
+            <h3 class="text-danger text-center">
+              Add new task
+            </h3>
+            <form action="#" id="add">
+
+              <label for="taskTitle" class="w-100 my-3">
+                <input type="text" class="form-control p-3" placeholder="enter task title" id="taskTitle" required>
+              </label>
+
+              <label for="taskdesc" class="w-100 my-3">
+                <input type="text" class="form-control p-3" placeholder="enter task description" id="taskDesc" required>
+              </label>
+
+              <label for="taskDate" class="w-100 my-3">
+                <input type="date" class="form-control p-3" id="taskDate" required>
+              </label>
+
+
+              <button type="submit" class="btn btn-success w-100 p-3 my-3">
+                ADD TASK
+              </button>
+
+            </form>
+          </div>
+          <div class="col-md-8 p-3 shadow">
+            <h3 class="text-danger text-center">
+              Latest tasks list
+            </h3>
+            <table class="table table-striped table-hover table-bordered mt-4">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Task title</th>
+                  <th>Task description</th>
+                  <th>Task deadline</th>
+                  <th>Edit</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="data">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+</body>
+<script src="./scripts/bootstrap.min.js"></script>
+<script src="./scripts/utils.js"></script>
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,24 @@
+body {
+  overflow-x: hidden;
+}
+
+.toastify {
+  min-width: 220px;
+  padding: 12px;
+  background: rgba(255, 5, 5, 0.965);
+  position: absolute;
+  right: 0;
+  transition: all 0.3s cubic-bezier(0.62, -0.55, 0, 1.59);
+}
+
+.hide-toast {
+  transform: translateX(160%);
+}
+
+.login {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}

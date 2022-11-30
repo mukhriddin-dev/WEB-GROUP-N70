@@ -1,0 +1,11 @@
+{
+  "name": "module-4",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "WEB-DEV",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "json-server": "^0.17.1"
+  }
+}
