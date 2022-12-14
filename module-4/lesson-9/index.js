@@ -1,16 +1,24 @@
 "use strict";
 
-const baseURL = "http://localhost:8080";
+const baseURL = "https://task.samid.uz/v1";
 let error = `<i class="bi bi-x-octagon text-white fs-3"></i>`;
 let warning = `<i class="bi bi-exclamation-circle text-dark fs-3"></i>`;
 let success = `<i class="bi bi-check-circle text-white fs-3"></i>`;
 
+let token = localStorage.getItem('token');
+
 // ============ FETCH ALL DATA =============================
 const fetchData = async () => {
-  const response = await fetch(`${baseURL}/task`);
+  const response = await fetch(`${baseURL}/task`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    }
+  });
   const data = await response.json();
-  console.log(data);
-  dataRender(data);
+  console.log(data.data);
+  dataRender(data.data);
 };
 
 fetchData();
@@ -27,9 +35,9 @@ function dataRender(data = []) {
         `
 <td>${i + 1}</td>
 <td>${el.title}</td>
-<td>${el.descrip}</td>
+<td>${el.description}</td>
 <td>
-${el.date}
+${el.created_by}
 </td>
 <td> <button class="btn btn-warning" data-edit="${
             el.id
@@ -63,16 +71,26 @@ const addTask = () => {
   } else {
     toastify(success, "successfully added new task", 'seagreen')
     fetch(`${baseURL}/task`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: taskTitle,
-        descrip: taskDesc,
-        date: taskDate,
-      }),
-    });
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          title: taskTitle,
+          description: taskDesc,
+          number: Math.floor(Math.random() * 100),
+          status: 0
+        }),
+      }).then((response) => response.json())
+      .then((result) => {
+        if (result.code === 1) {
+          window.location.reload()
+        }
+
+
+      })
+      .catch((err) => console.log(err))
   }
 };
 
@@ -100,20 +118,23 @@ async function sendModal(id) {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+
     },
-  });
-  const result = await response.json();
-  console.log(result);
+  })
+  const {
+    data
+  } = await response.json();
+
 
   const {
     title,
-    descrip,
-    date
-  } = result;
+    description,
+  } = data;
 
   $("#editTitle").value = title;
-  $("#editDesc").value = descrip;
-  $("#editDate").value = date;
+  $("#editDesc").value = description;
+  $("#editDate").value = "";
 }
 
 
@@ -138,13 +159,19 @@ $("#edit").addEventListener("submit", (e) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify({
         title: taskTitle,
-        descrip: taskDesc,
-        date: taskDate,
+        description: taskDesc,
+        status: 1,
+        number: Math.floor(Math.random() * 100),
       }),
-    });
+    }).then((response) => response.json()).then((result) => {
+      if (result.code === 1) {
+        location.reload()
+      }
+    })
   }
 });
 
@@ -163,10 +190,15 @@ function deleteTask(id) {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       },
-      body: JSON.stringify({}),
-    });
+    })
+
+    location.reload()
+
+
   }, 2000)
+
 
 }
 

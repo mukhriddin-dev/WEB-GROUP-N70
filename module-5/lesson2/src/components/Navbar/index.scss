@@ -1,0 +1,41 @@
+header {
+   width: 100%;
+   background-color: crimson;
+
+   .nav {
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
+      align-items: center;
+
+      &-logo {
+         text-transform: uppercase;
+         color: #fff;
+      }
+
+
+      &__ul {
+         width: 45%;
+         display: flex;
+         justify-content: space-between;
+
+         &--list {
+            text-transform: uppercase;
+            list-style-type: none;
+
+            a {
+               text-decoration: none;
+               color: #fff;
+
+               &:hover {
+                  color: #333;
+               }
+            }
+         }
+
+      }
+
+   }
+
+
+}

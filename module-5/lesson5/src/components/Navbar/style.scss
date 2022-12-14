@@ -1,0 +1,33 @@
+header{
+   width: 100%;
+   background-color: rgb(37, 39, 57);
+   .nav{
+      height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(37, 39, 57);
+
+      &__logo{
+         color:rgb(0, 187, 255);
+      }
+
+      &__ul{
+         text-transform: uppercase;
+         padding-top: 13px;
+         &--list{
+            list-style-type: none;
+            a{
+               text-decoration: none;
+               color:rgb(0, 187, 255);
+
+               &:hover{
+                  color:white;
+               }
+            }
+         }
+
+
+      }
+   }
+}
