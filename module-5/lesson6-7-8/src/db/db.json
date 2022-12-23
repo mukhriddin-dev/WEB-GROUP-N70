@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "35fd4b58-c00e-4aab-a516-c0109756e4cc",
+      "username": "Husniddin",
+      "age": "22"
+    },
+    {
+      "id": "c8a7c11c-37fe-428b-a179-6627f9261d8d",
+      "username": "Navruzbek",
+      "age": "22"
+    }
+  ]
+}

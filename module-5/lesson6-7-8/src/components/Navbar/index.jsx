@@ -44,6 +44,11 @@ const index = () => {
                   Posts
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/users">
+                  Userlist
+                </NavLink>
+              </li>
             </ul>
           </div>
 
