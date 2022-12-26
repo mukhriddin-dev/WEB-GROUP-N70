@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
 const index = () => {
+
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -23,7 +24,7 @@ const index = () => {
       setUser(user);
       setLoading(true);
     });
-  }, [removeUserItem]);
+  }, []);
 
  
   if (!loading) {

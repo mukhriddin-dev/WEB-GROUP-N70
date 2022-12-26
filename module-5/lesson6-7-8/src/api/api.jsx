@@ -1,5 +1,6 @@
 let baseURL = "http://localhost:8080";
 let URL = "https://jsonplaceholder.typicode.com";
+let loginURL = "https://task.samid.uz/v1/user/sign-in";
 
 export const api = {
   getPosts: async () => {
@@ -50,6 +51,12 @@ export const api = {
     });
   },
 
-
-  
+  useAuth: (params) =>
+    fetch(loginURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify( params ),
+    }),
 };
